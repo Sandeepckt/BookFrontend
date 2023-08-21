@@ -28,26 +28,24 @@ function NavBar(args) {
         <Nav className="w-100 d-md-flex ml-auto justify-content-between flex-row d-none">
           <div className='d-inline-flex align-items-center'>
             <NavbarBrand href="/"><img src={logo}/></NavbarBrand>
-        
+            
+            <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret>
+                Shop By Category
+              </DropdownToggle>
+              <DropdownMenu right>
+                <DropdownItem>Books</DropdownItem>
+                <DropdownItem>Stationary</DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink href="/components/">My Orders</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="https://github.com/reactstrap/reactstrap">
-                GitHub
+                FAQ
               </NavLink>
             </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Options
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>Option 1</DropdownItem>
-                <DropdownItem>Option 2</DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>Reset</DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
             </div>
           <div className='d-inline-flex align-items-center ml-auto'>
             <NavItem>
