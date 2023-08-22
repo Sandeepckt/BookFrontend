@@ -1,21 +1,20 @@
 import React, { useState } from 'react';
+import { BsCart2 } from "react-icons/bs";
 import {
   Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
+  DropdownItem,
+  DropdownMenu,
+  DropdownToggle,
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
+  Navbar,
+  NavbarBrand,
   NavbarText,
+  NavbarToggler,
+  UncontrolledDropdown,
 } from 'reactstrap';
-import { BsCart2 } from "react-icons/bs";
-import logo from "../assets/img/logo_book.svg"
-import Cart from "../assets/img/cart.svg"
+import logo from "../../assets/img/logo_book.svg";
 function NavBar(args) {
   const [isOpen, setIsOpen] = useState(false);
 

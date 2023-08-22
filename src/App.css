@@ -74,21 +74,16 @@ body {
   right: -20px;
   transition: 0.5s;
 }
-
 #reg_btn:hover span {
 padding-right: 25px;
 }
-
 #reg_btn:hover span:after {
 opacity: 1;
 right: 0;
 }
-
-/***    Login Page     ***/
 h2 {
   font-weight: 300
 }
-
 form {
   display: inline-block;
   background: #f3f3f3;
@@ -151,39 +146,46 @@ form label {
   color: #fff;
   border-radius: 4px;
 }
-
 #sub_btn:hover {
   background: #333;
   transition: all .5s
 }
-
-footer p {
-  margin: 0;
-  font-size: .9rem
-}
-
-/***    Register Page     ***/
 #checkbox {
   width: 1rem
 }
-
 form span {
   font-size: .8rem
 }
-
 #reset_pass_lbl {
   float: left
 }
-
-/***    Home Page     ***/
 .home-page-title {
   color: #222
 }
-.cart-icon {
-  height: 40px !important;
-  width: 40px !important;
-  
-}
 /*****************nav*****************/
 .nav-item a{font-size: 14px;color: #282c34;}
-.navbar{padding: 8px 30px !important;}
+/* .navbar{padding: 8px 30px !important;} */
+
+.content-bg{
+  min-height: calc(100vh - 154px);
+  overflow-y: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.footer{
+  background: #6BA14A;
+  color: #fff;
+  text-align: center;
+}
+.container-fluid{padding: 0 30px !important;}
+.card{
+  border: 0;
+  box-shadow: 0 1px 8px #c9c3c3 !important;
+}
+.card img{
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.card-body{
+  padding: 12px !important;
+}
