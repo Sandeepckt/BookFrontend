@@ -11,7 +11,7 @@ export default function SignUpPage() {
         customerContactNo: '',
         checkbox: false,
     });
-    const navigate = useNavigate;
+    const navigate = useNavigate(); // Call useNavigate as a function
 
     const handleChange = (event) => {
         const { name, value, type, checked } = event.target;
@@ -24,9 +24,9 @@ export default function SignUpPage() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        
+
         if (!customer.checkbox) {
-            alert('Please agree to the terms of service.');
+            // alert('Please agree to the terms of service.');
             return;
         }
 
@@ -58,22 +58,22 @@ export default function SignUpPage() {
             <form action="/home" onSubmit={handleSubmit}>
                 <p>
                     <label>Username</label><br/>
-                    <input type="text" name="customerName" required />
+                    <input type="text" name="customerName" onChange={handleChange} required />
                 </p>
                 <p>
                     <label>Email address</label><br/>
-                    <input type="email" name="customerEmail" required />
+                    <input type="email" name="customerEmail" onChange={handleChange} required />
                 </p>
                 <p>
                     <label>Password</label><br/>
-                    <input type="password" name="password" required />
+                    <input type="password" name="password" onChange={handleChange} required />
                 </p>
                 <p>
                     <label>Contact</label><br/>
-                    <input type="number" name="customerContactNo" required />
+                    <input type="number" name="customerContactNo" onChange={handleChange} required />
                 </p>
                 <p>
-                    <input type="checkbox" name="checkbox" id="checkbox" required /> <span>I agree all statements in <a href="https://google.com" target="_blank" rel="noopener noreferrer">terms of service</a></span>.
+                    <input type="checkbox" name="checkbox" id="checkbox"  /> <span>I agree all statements in <a href="https://google.com" target="_blank" rel="noopener noreferrer">terms of service</a></span>.
                 </p>
                 <p>
                     <button id="sub_btn" type="submit">Register</button>
