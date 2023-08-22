@@ -13,7 +13,7 @@ import {
   DropdownItem,
   NavbarText,
 } from 'reactstrap';
-
+import { BsCart2 } from "react-icons/bs";
 import logo from "../assets/img/logo_book.svg"
 import Cart from "../assets/img/cart.svg"
 function NavBar(args) {
@@ -32,7 +32,7 @@ function NavBar(args) {
 
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-                Shop By Category
+                Products
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>Books</DropdownItem>
@@ -40,12 +40,19 @@ function NavBar(args) {
               </DropdownMenu>
             </UncontrolledDropdown>
             <NavItem>
-              <NavLink href="/components/">My Orders</NavLink>
+              <NavLink href="/components/">Lending Library</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">
-                FAQ
-              </NavLink>
+              <NavLink href="/components/">My self</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/components/">My Library</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/components/">About Us</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/components/">Contact Us</NavLink>
             </NavItem>
           </div>
           <div className='d-inline-flex align-items-center ml-auto'>
@@ -57,7 +64,7 @@ function NavBar(args) {
               SignUp
               </NavLink>
             </NavItem>
-            <NavbarBrand href="/cart" ><img src={Cart} className="cart-icon p-1" / ></NavbarBrand>
+            <NavbarBrand href="/cart" ><BsCart2/></NavbarBrand>
           </div>
         </Nav>
 

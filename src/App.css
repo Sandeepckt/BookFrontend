@@ -97,9 +97,18 @@ form {
   padding: 2rem;
   margin: 2rem 0 1rem 0
 }
-
+.sign_in{
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sign_in form{
+  max-width: 600px;
+}
 form label {
-  float: left;
+  text-align: left;
   font-size: .9rem;
   margin: 0;
   padding: 0
@@ -109,23 +118,38 @@ form label {
   float: right;
   cursor: pointer
 }
-
-input {
-  width: 15rem;
-  padding: .3rem;
-  border-radius: 5px;
+.font-12{font-size: 12px;}
+.log_in{
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.form-control {
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  height: 34px;
+  font-size: 14px !important;
+  line-height: 18px !important;
   outline: none;
-  border: none
+  border: none;
+  display: block;
+  width: 100%;
 }
 
 #sub_btn {
   display: block;
   width: 100%;
-  padding: .3rem;
+  padding: 0.3rem 0.5rem;
+  font-size: 14px !important;
+  line-height: 18px !important;
   border: none;
   background: #222;
   color: #fff;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 #sub_btn:hover {
@@ -160,3 +184,6 @@ form span {
   width: 40px !important;
   
 }
+/*****************nav*****************/
+.nav-item a{font-size: 14px;color: #282c34;}
+.navbar{padding: 8px 30px !important;}

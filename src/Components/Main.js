@@ -9,6 +9,7 @@ function Main() {
     <>
         <NavBar/>
         <Outlet />
+        
         <Footer/>
         
     </>
