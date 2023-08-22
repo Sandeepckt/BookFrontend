@@ -3,54 +3,26 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useState} from 'react'
 
 
-export default function SignUpPage() {
-    const [customer, setCustomer] = useState({
-        customerName: '',
-        customerEmail: '',
-        password: '',
-        customerContactNo: '',
-        checkbox: false,
-    });
-    const navigate = useNavigate(); // Call useNavigate as a function
-
+export default function SignUpPage(props) {
+    const [customer, setCustomer] = useState({});
+    let navigate = useNavigate();
     const handleChange = (event) => {
-        const { name, value, type, checked } = event.target;
-        const newValue = type === 'checkbox' ? checked : value;
-        setCustomer((prevCustomer) => ({
-            ...prevCustomer,
-            [name]: newValue,
-        }));
-    };
-
-    const handleSubmit = async (event) => {
+        const name = event.target.name;
+        const value = event.target.value;
+        setCustomer(values => ({ ...values, [name]: value }))
+    }
+    const handleSubmit = (event) => {
+        let demo = JSON.stringify(customer);
+        console.log(JSON.parse(demo));
+        fetch("http://localhost:8080/api/customer/add", {
+            method: 'POST',
+            headers: { 'Content-type': 'application/json' },
+            body: demo
+        }).then(r => r.json()).then((data) => data)
         event.preventDefault();
-
-        if (!customer.checkbox) {
-            // alert('Please agree to the terms of service.');
-            return;
-        }
-
-        try {
-            const response = await fetch("http://localhost:8080/api/customer/add", {
-                method: 'POST',
-                headers: { 'Content-type': 'application/json' },
-                body: JSON.stringify(customer),
-            });
-
-            if (response.ok) {
-                // Registration successful, navigate to appropriate page
-                navigate('/');
-            } else {
-                // Handle error response
-                const errorData = await response.json();
-                console.error('Registration failed:', errorData);
-                // You might want to display an error message to the user
-            }
-        } catch (error) {
-            console.error('An error occurred:', error);
-            // Handle network errors
-        }
-    };
+        navigate('/');
+        // alert(employee);
+    }
     return (
         <div className="text-center m-5-auto">
             <h2>Join us</h2>
