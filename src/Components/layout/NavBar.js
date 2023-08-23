@@ -34,8 +34,9 @@ function NavBar(args) {
                 Products
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem>Books</DropdownItem>
-                <DropdownItem>Stationary</DropdownItem>
+                <DropdownItem>E-Books</DropdownItem>
+                <DropdownItem>Video-Books</DropdownItem>
+                <DropdownItem>Audio-Books</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
             <NavItem>
@@ -45,7 +46,7 @@ function NavBar(args) {
               <NavLink href="/components/">My self</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/components/">My Library</NavLink>
+              <NavLink href="/mylibrary">My Library</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/components/">About Us</NavLink>
