@@ -2,15 +2,17 @@ import React from 'react';
 import list from '../Cart/data';
 import Cards from './Card';
 
-const Amazon = ({handleClick}) => {
+const Amazon = ({ handleClick }) => {
   return (
-    <section className='section-cart'>
-        {
-            list.map((item)=>(
-                <Cards item={item} key={item.id} handleClick={handleClick} />
-            ))
-        }
-    </section>
+    <div className='row'>
+      {
+        list.map((item) => (
+          <div className='col-lg-3 col-md-4 col-sm-6 col-12 mb-3'>
+            <Cards item={item} key={item.id} handleClick={handleClick} />
+          </div>
+        ))
+      }
+    </div>
   )
 }
 
