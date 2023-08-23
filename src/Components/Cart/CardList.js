@@ -51,7 +51,7 @@ const CardList = () => {
 					</div>
 					<div className='col-lg-12 mb-4'>
 
-						{/* <CartNavbar size={cart.length} setShow={setShow} /> */}
+						<CartNavbar size={cart.length} setShow={setShow} />
 						{
 							show ? <Amazon handleClick={handleClick} /> : <CartNew cart={cart} setCart={setCart} handleChange={handleChange} />
 						}

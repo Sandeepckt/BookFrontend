@@ -9,8 +9,9 @@ import {
 export default function Footer() {
   return (
     <MDBFooter className='footer'>
-      <MDBContainer className='p-3'>
-        <section className=''>
+    <div className='container-fluid'>
+      <div className='row align-items-center '>
+        {/* <div className='col-md-auto'>
           <MDBBtn
             floating
             className='m-1'
@@ -69,15 +70,17 @@ export default function Footer() {
           >
             <MDBIcon fab icon='github' />
           </MDBBtn>
-        </section>
-      </MDBContainer>
-
-      <div className='text-center p-3 font-12' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
+        </div> */}
+        <div className='text-center p-3 font-12 col-md-12'>
         © 2020 Copyright:
         <a className='text-white' href='https://mdbootstrap.com/'>
           MDBootstrap.com
         </a>
       </div>
+      </div>
+      </div>
+
+      
     </MDBFooter>
   );
 }

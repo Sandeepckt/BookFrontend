@@ -28,11 +28,17 @@ export default function MyLibrary() {
   ));
 
   return (
-    <div className="App">
-      <h1>React multi carousel</h1>
+    <div className="container-fluid">
+    <div className="row">
+    <div className="col-12">
+      <h2 className="title text-center">My Library</h2>
+      </div>
+    <div className="col-12">
       <Carousel showDots={true} responsive={responsive}>
         {product}
       </Carousel>
+  </div>
+  </div>
   </div>
   );
 }

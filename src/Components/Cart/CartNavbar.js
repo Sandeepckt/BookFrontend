@@ -2,7 +2,7 @@ import React from 'react';
 
 const CartNavbar = ({ size, setShow }) => {
     return (
-        <nav className='bg-success'>
+        <nav className='bg-success mb-3'>
             <div className="container-fluid">
                 <div className='row align-items-center '>
                     <div className='col'>

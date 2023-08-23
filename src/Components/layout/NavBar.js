@@ -49,7 +49,7 @@ function NavBar(args) {
               <NavLink href="/mylibrary">My Library</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/components/">About Us</NavLink>
+              <NavLink href="/aboutus">About Us</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/components/">Contact Us</NavLink>
@@ -64,7 +64,7 @@ function NavBar(args) {
               SignUp
               </NavLink>
             </NavItem>
-            <NavbarBrand href="/cart" ><BsCart2/></NavbarBrand>
+            <NavbarBrand href="/cart" ><i className="fas fa-cart-plus font-18"></i></NavbarBrand>
           </div>
         </Nav>
 

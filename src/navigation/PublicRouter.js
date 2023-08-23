@@ -8,6 +8,7 @@ import NavBar from "../Components/layout/NavBar";
 import Footer from "../Components/layout/Footer";
 
 import MyLibrary from "../Components/Product/MyLibrary";
+import AboutUs from "../Components/AboutUs/about";
 
 function PublicRouter() {
     let location = useLocation();
@@ -29,6 +30,7 @@ function PublicRouter() {
                             <Route path='/signup' element={<SignUpPage />} />
                             <Route path='/cart' element={<Cart />} />
                             <Route path='/mylibrary' element={<MyLibrary/>} />
+                            <Route path='/aboutus' element={<AboutUs/>} />
                             
                             </Routes>
                         </div>

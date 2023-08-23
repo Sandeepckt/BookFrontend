@@ -11,7 +11,7 @@ const Cards = ({item, handleClick}) => {
             <p className='card-title'>{title}</p>
             <p className='card_desc'>{author}</p>
             <p>Price - {price}Rs</p>
-            <button onClick={()=>handleClick(item)} className='btn'>Add to Cart</button>
+            <button onClick={()=>handleClick(item)} className='btn btn-primary'>Add to Cart</button>
         </div>
     </div>
   )
