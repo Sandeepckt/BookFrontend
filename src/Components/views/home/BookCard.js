@@ -5,13 +5,7 @@ import { Card,CardBody, CardTitle, CardSubtitle, CardText, Button } from 'reacts
         return (
             <>
                 <Card
-                    body
-                    color="info"
-                    inverse
-                    style={{
-                        width: '18rem'
-                    }}
-                >
+                    >
                     <img
                         alt="Sample"
                         src="https://picsum.photos/300/200"

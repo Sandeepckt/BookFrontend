@@ -8,9 +8,9 @@ import {
 
 export default function Footer() {
   return (
-    <MDBFooter className='bg-light text-center text-white'>
-      <MDBContainer className='p-4 pb-0'>
-        <section className='mb-4'>
+    <MDBFooter className='footer'>
+      <MDBContainer className='p-3'>
+        <section className=''>
           <MDBBtn
             floating
             className='m-1'
@@ -72,7 +72,7 @@ export default function Footer() {
         </section>
       </MDBContainer>
 
-      <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
+      <div className='text-center p-3 font-12' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
         © 2020 Copyright:
         <a className='text-white' href='https://mdbootstrap.com/'>
           MDBootstrap.com
