@@ -414,7 +414,7 @@ article{
   border-radius: 2px;
 }
 
-.warning{
+/* .warning{
   height: 40px;
   width: 250px;
   position: absolute;
@@ -426,7 +426,7 @@ article{
   font-family: cursive;
   padding: 5px;
   border-radius: 5px;
-}
+} */
 ::-webkit-scrollbar {
   width: 5px;
 }
