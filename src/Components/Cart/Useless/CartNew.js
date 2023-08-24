@@ -15,7 +15,7 @@ import {
     MDBTableHead,
   } from "mdb-react-ui-kit";
 
-const Cart = ({cart, setCart, handleChange}) => {
+const CartNew = ({cart, setCart, handleChange}) => {
     const [price, setPrice] = useState(0);
     var price1;
 
@@ -35,14 +35,14 @@ const Cart = ({cart, setCart, handleChange}) => {
 
     useEffect(()=>{
         handlePrice();
-    }, [cart]);
+    })
 
   return (
     <>
     <article>
         {
-            cart.map((item)=>(
-                <div key={item.id} className="cart_box" >
+            cart?.map((item)=>(
+                <div className="cart_box" key={item.id}>
                     <div className="cart_img">
                         <img src={item.img} />
                         <p>{item.title}</p>
@@ -199,4 +199,4 @@ const Cart = ({cart, setCart, handleChange}) => {
   )
 }
 
-export default Cart;
+export default CartNew;

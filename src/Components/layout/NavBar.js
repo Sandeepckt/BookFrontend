@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { BsCart2 } from "react-icons/bs";
 import {
   Collapse,
   DropdownItem,
@@ -15,7 +14,19 @@ import {
   UncontrolledDropdown,
 } from 'reactstrap';
 import logo from "../../assets/img/logo_book.svg";
-function NavBar(args) {
+function NavBar({size}) {
+
+  const mystyle = {
+    padding: "0 3px",
+    backgroundColor: "red",
+color: "white",
+fontWeight: "bold",
+borderRadius: "5px",
+fontSize: "10px",
+position: "absolute",
+top: "14px",
+right: "50px"
+  };
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -23,7 +34,7 @@ function NavBar(args) {
   return (
     <>
 
-      <Navbar {...args}>
+      <Navbar >
 
         <Nav className="w-100 d-md-flex ml-auto justify-content-between flex-row d-none">
           <div className='d-inline-flex align-items-center'>
@@ -43,7 +54,7 @@ function NavBar(args) {
               <NavLink href="/components/">Lending Library</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/components/">My self</NavLink>
+              <NavLink href="/products">My self</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/mylibrary">My Library</NavLink>
@@ -64,7 +75,9 @@ function NavBar(args) {
               SignUp
               </NavLink>
             </NavItem>
-            <NavbarBrand href="/cart" ><i className="fas fa-cart-plus font-18"></i></NavbarBrand>
+            <NavbarBrand href="/cart" className="cart pt-2"><span><i className="fas fa-cart-plus font-18" style={{color: "black"}}></i>
+            </span>
+            <span style={mystyle}>{size}</span></NavbarBrand>
           </div>
         </Nav>
 

@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
-import CartNavbar from './CartNavbar';
-import Amazon from './Amazon';
-import CartNew from './CartNew';
+import Amazon from '../Cart/Amazon';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Cart from '../views/home/Cart';
+import { useState } from 'react';
 
 
-const CardList = () => {
-	const [show, setShow] = useState(true);
+export default function Main() {
+    const [show, setShow] = useState(true);
 	const [cart, setCart] = useState([]);
 	const [warning, setWarning] = useState(false);
 
@@ -41,29 +40,12 @@ const CardList = () => {
 			tempArr[ind].amount = 1;
 		setCart([...tempArr])
 	}
-
-	return (
-		<>
-			<div className='container-fluid content-bg'>
-				<div className='row'>
-					<div className='col-lg-12 mb-4'>
-						<h1 className='title text-center'>Our Products</h1>
-					</div>
-					<div className='col-lg-12 mb-4'>
-
-						<CartNavbar size={cart.length} setShow={setShow} />
-						{
-							show ? <Amazon handleClick={handleClick} /> : <CartNew cart={cart} setCart={setCart} handleChange={handleChange} />
-						}
-						{
+<>
+<Amazon handleClick={handleClick} /> 
+      <Cart cart={cart} setCart={setCart} handleChange={handleChange} />
+						{/* {
 							warning && <div className='warning'>Item is already added to your cart</div>
-						}
+						} */}
 						<ToastContainer />
-					</div>
-				</div>
-			</div>
-		</>
-	)
+                        </>
 }
-
-export default CardList
