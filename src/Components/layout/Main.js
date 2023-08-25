@@ -47,9 +47,11 @@ function Main() {
 	}
   return (
     <>
-      <NavBar size={cart.length}/>
-      <Amazon handleClick={handleClick} /> 
+      <NavBar size={cart.length} setShow={setShow}/>
+	{
+							show ? <Amazon handleClick={handleClick} /> :
       <Cart cart={cart} setCart={setCart} handleChange={handleChange} />
+						}
 						{
 							warning && <div className='warning'>Item is already added to your cart</div>
 						}

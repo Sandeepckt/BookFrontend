@@ -14,7 +14,7 @@ import {
   UncontrolledDropdown,
 } from 'reactstrap';
 import logo from "../../assets/img/logo_book.svg";
-function NavBar({size}) {
+function NavBar({size,setShow}) {
 
   const mystyle = {
     padding: "0 3px",
@@ -38,7 +38,7 @@ right: "50px"
 
         <Nav className="w-100 d-md-flex ml-auto justify-content-between flex-row d-none">
           <div className='d-inline-flex align-items-center'>
-            <NavbarBrand href="/"><img src={logo} /></NavbarBrand>
+            <NavbarBrand href="/"  onClick={()=>setShow(true)} ><img src={logo}/></NavbarBrand>
 
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
@@ -75,7 +75,7 @@ right: "50px"
               SignUp
               </NavLink>
             </NavItem>
-            <NavbarBrand href="/cart" className="cart pt-2"><span><i className="fas fa-cart-plus font-18" style={{color: "black"}}></i>
+            <NavbarBrand className="cart pt-2" ><span><i className="fas fa-cart-plus font-18" style={{color: "black"}}onClick={()=>setShow(true)}></i>
             </span>
             <span style={mystyle}>{size}</span></NavbarBrand>
           </div>

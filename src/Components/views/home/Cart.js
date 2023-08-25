@@ -2,17 +2,12 @@ import React,{useState} from 'react';
 import { useEffect } from 'react';
 import {
     MDBBtn,
-    MDBCard,
     MDBCardBody,
     MDBCol,
-    MDBContainer,
     MDBIcon,
     MDBInput,
     MDBRadio,
     MDBRow,
-    MDBTable,
-    MDBTableBody,
-    MDBTableHead,
   } from "mdb-react-ui-kit";
 
 const Cart = ({cart, setCart, handleChange}) => {
@@ -35,13 +30,13 @@ const Cart = ({cart, setCart, handleChange}) => {
 
     useEffect(()=>{
         handlePrice();
-    }, [cart]);
-
+    },[cart] );
+    // [cart]
   return (
     <>
     <article>
         {
-            cart.map((item)=>(
+            cart?.map((item)=>(
                 <div key={item.id} className="cart_box" >
                     <div className="cart_img">
                         <img src={item.img} />
